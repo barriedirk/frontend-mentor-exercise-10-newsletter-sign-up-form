@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,7 +25,6 @@
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
         font-size: 11px;
@@ -43,7 +41,7 @@
   <body>
     <main id="main-content">
       <article class="newsletter__container" aria-labelledby="newsletter-title">
-        <section class="newsletter__body" role="region">
+        <section id="newsletter__body" class="newsletter__body" role="region">
           <picture class="newsletter__image">
             <source
               media="(min-width: 904px)"
@@ -67,7 +65,7 @@
 
             <form
               id="newsletter__form"
-              class="error"
+              class=""
               action="/"
               method="POST"
               novalidate
@@ -79,13 +77,12 @@
                   class="error-message"
                   role="alert"
                   aria-live="polite"
-                  >Please provide a valid email address</span
-                >
+                ></span>
                 <input
                   type="email"
                   placeholder="email@company.com"
                   name="newsletter__email"
-                  id="newsletter__email"
+                  id="newsletterEmail"
                   aria-required="true"
                   aria-describedby="newsletter__error"
                   autocomplete="email"
@@ -97,29 +94,32 @@
             </form>
           </div>
         </section>
-        <section
-          class="newsletter__thanks hidden"
-          role="status"
-          aria-live="polite"
-        >
-          <img
-            class="newsletter__success-icon"
-            src="./assets/images/icon-success.svg"
-            alt="Success"
-          />
-          <h1>Thanks for subscribing!</h1>
-          <p>
-            A confirmation email has been sent to
-            <strong class="newsletter__email">ash@loremcompany.com</strong>.
-            Please open it and click the button inside to confirm your
-            subscription.
-          </p>
-          <button id="newsletter__dismiss" aria-label="Dismiss success message">
-            Dismiss message
-          </button>
-        </section>
       </article>
     </main>
+    <div class="newsletter__thanks--wrapper">
+      <section
+        id="newsletter__thanks"
+        class="newsletter__thanks hidden"
+        role="status"
+        aria-live="polite"
+      >
+        <img
+          class="newsletter__success-icon"
+          src="./assets/images/icon-success.svg"
+          alt="Success"
+        />
+        <h1>Thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to
+          <strong class="subscription__email">ash@loremcompany.com</strong>.
+          Please open it and click the button inside to confirm your
+          subscription.
+        </p>
+        <button id="newsletter__dismiss" aria-label="Dismiss success message">
+          Dismiss message
+        </button>
+      </section>
+    </div>
 
     <div class="attribution">
       Challenge by
